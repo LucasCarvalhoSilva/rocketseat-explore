@@ -230,3 +230,37 @@ footer {
     width: 38.4rem;
   }
 }
+
+header {
+  --startY: -100%;
+  animation: move .2s;
+}
+
+footer {
+  --startY: 100%;
+  animation: move .2s;
+}
+
+.card {
+  animation: moveRight .5s;
+}
+
+@keyframes move{
+  from {
+    transform: translateY(var(--startY))
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+    transform: translateX(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transform: translateX(0);
+  }
+}
