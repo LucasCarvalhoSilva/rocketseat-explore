@@ -1,0 +1,104 @@
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  appearance: none;
+}
+
+:root {
+  font-size: 62.5%;
+  --bg-sound-primary: #E1E1E6;
+  --bg-sound-selected: #02799D;
+  --primary: #323238;
+  --selected: #FFFFFF;
+}
+
+body {
+  height: 100vh;
+
+  display: grid;
+  place-content: center;
+
+  background-color: var(--selected);
+}
+
+main {
+  display: flex;
+  gap: 10.2rem;
+  align-items: center;
+}
+
+#timer-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 4.6rem;
+}
+
+#timer-contents #timer-wrapper {
+  display: flex;
+  align-items: center;
+  gap:0;
+}
+
+#timer-contents #timer-wrapper span {
+  font-family: sans-serif;
+  font-size: 12.6rem;
+  font-weight: 500;
+  line-height: none;
+}
+
+#timer-controls {
+  display: flex;
+  gap: 2.6rem;
+}
+
+#timer-controls button {
+  background-color: transparent;
+  border: 0;
+  color: var(--primary);
+
+  cursor: pointer;
+  font-size: 4.8rem;
+  transition: transform 0.3s;
+}
+
+#timer-controls button:hover {
+  transform: scale(1.2);
+}
+
+#sounds-options {
+  display: grid;
+  grid-template-columns:1fr 1fr ;
+  gap: 3.2rem;
+}
+
+.sound-wrapper {
+  display: grid;
+  place-content: center;
+  width: 15.2rem;
+  height: 13.8rem;
+
+  border-radius: 2.4rem;
+  background: var(--bg-sound-primary);
+}
+
+.sound-wrapper.selected {
+  background-color: #02799D;
+}
+
+.sound-wrapper .svg {
+  fill: var(--primary);
+}
+
+.sound-wrapper.selected .svg {
+  fill: var(--selected);
+}
+
+.sound-wrapper {
+  color: var(--primary);
+}
