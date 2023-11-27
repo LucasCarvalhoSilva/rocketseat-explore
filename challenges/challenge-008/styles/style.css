@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-size: 4.8rem;
+    line-height: 125%;
+    font-weight: bold;
+    color: #E1E1E6;
+}
+
+p {
+    font-size: 1.8rem;
+    color: #E1E1E6;
+    line-height: 160%;
+
+    margin-top: 1.6rem;
+    max-width: 50vw;
+}
+
+nav {
+    display: flex;
+    gap: 3.2rem;
+    height: 12.2rem;
+    align-items: center;
+    padding: 7.2rem 4rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 2.4rem;
+    color: #8D8D99;
+    transition: transform .4s ease-in-out;
+}
+
+html.home {
+    background-image: url("../assets/mountains-universe-1.png");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+html.home .home {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+html.universe .universe {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+html.explore .explore {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+html.explore {
+    background-image: url("../assets/mountains-universe-3.png");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+html.universe {
+    background-image: url("../assets/mountains-universe02.png");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+.content {
+    margin-top: 6.3rem;
+    margin-left: 10rem;
+}
+
+.home-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    margin-top: 17rem;
+}
+
+.home-content h1 {
+    font-size: 4.8rem;
+    line-height: 125%;
+    font-weight: bold;
+    color: #E1E1E6;
+}
+
+.home-content button {
+    width: 20rem;
+    height: 5rem;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    background: none;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: #FFFFFF;
+    text-transform:uppercase;
+    cursor: pointer;
+    transition: transform .4s ease-in-out;
+}
+
+.home-content button:hover,
+a:hover {
+    transform: scale(1.3);
+}
