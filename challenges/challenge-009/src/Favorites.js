@@ -74,15 +74,23 @@ export class FavoritesView extends Favorites{
     }
 
     onAdd() {
-        const addButton = this.root.querySelector('.search button')
+        const addButton = this.root.querySelector('#btn-favorite')
         addButton.onclick = () => {
-            const { value } = this.root.querySelector('.search input')
+            const { value } = this.root.querySelector('#favorite-url')
             this.add(value)
         }
     }
     
     update() {
         this.removeAllTr()
+        
+        if(this.entries.length === 0) {
+            console.log("Entrou aqui, a tabela está vazia mesmo")
+            const component = this.createEmptyTableRow()
+            this.tbody.append(component)
+        } else if (this.entries.length > 0) {
+            this.removeEmptyInformation()
+        }
         
         this.entries.forEach(user => {
             const row = this.createRow()
@@ -119,10 +127,30 @@ export class FavoritesView extends Favorites{
             </td>
             <td class="repositories">76</td>
             <td class="followers">9589</td>
-            <td><button class="remove">&times;</button></td>
+            <td><button class="remove">Remover</button></td>
         `
         
         return tr
+    }
+
+    createEmptyTableRow() {
+        
+        const empty = document.createElement('div')
+        empty.classList.add('table-empty')
+        empty.innerHTML = `
+            <img src="../challenge-009/assets/estrela.svg" alt="estrela" />
+            <span>Nenhum favorito ainda</span>
+        `
+
+        return empty
+    }
+
+    removeEmptyInformation() {
+        this.tbody.querySelectorAll('div')
+        .forEach((div) => {
+            console.log("não existe")
+            div.remove()
+        })
     }
 
     removeAllTr() {
