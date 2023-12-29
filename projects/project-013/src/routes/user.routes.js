@@ -19,7 +19,7 @@ function myMiddleware(request, response, next) {
 
 
 
-const userController = new UserController
+const userController = new UserController()
 
 userRoutes.post("/", myMiddleware, userController.create)
 userRoutes.put("/:id", userController.update)
